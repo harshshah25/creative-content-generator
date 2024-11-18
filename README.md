@@ -1,47 +1,26 @@
-# creativeWriter-llama
+# creative-content-generator
 
 ### Project Overview
 
-This repository offers a streamlined solution for deploying local LLM applications, utilizing the Llama-2-7B model as its backbone, yet it's fully adaptable to any LLM framework. It serves as a prototype for a creative writer application, generating articles from user-defined topics. Its core functionality—prompt-based response generation from the LLM—enables the development of a tons of applications by simply altering the prompts.
+Creative Content Generator is an intelligent content generation application designed to empower users to create dynamic and engaging content based on their input. By leveraging the power of the LLAMA2-7B model, a state-of-the art Large Language Model (LLM), users can generate essays, poems, blogs, or jokes tailored to their requirements. With modularity and versatility at its core, the application ensures flexibility and ease of use, making it a perfect tool for 
+students, writers, marketers, and content creators. 
 
--------
+This project utilizes key frameworks and tools such as LangChain, Streamlit, and sentence-transformers, among others, to streamline interaction between the user and the model. The application runs efficiently with the LLAMA2-7B model deployed locally via ctransformers and uses prompt engineering for fine grained control over the outputs. For this project, the focus is on the LLAMA-2 7B model, a versatile LLM available on Hugging Face. 
 
-### How to run
-1. **Repository Cloning**: Clone the repository to initiate your local setup.
-2. **Download Model**: Download LLM model from the [HuggingFace](https://huggingface.co/models) and save it in `/models`
-   > Download link: (https://huggingface.co/BashitAli/llama-2-7b-chat.ggmlv3.q5_K_M)
-4. **Virtual Environment**: Establish an isolated environment for dependency management
-   ```
-   conda create -p env_name python==3.9 -y
-   ```
-5. Dependency Installation: Install necessary dependencies using `requirements.txt`
-   ```python
-   pip install -r requirements.txt
-   ```
-6. **Application Initialization**: Launch the application through Streamlit
-   ```python
-   streamlit run app.py
-   ```
-   
------------
-
-
-### Re-use code for different application
-
-The modular design of this framework permits the creation of diverse LLM applications through prompt customization:
-We can implement minor modifications to get the target application as follows:
-
-+ Prompt Customization for Application: change the prompt to get the desired result. 
-```python
-  ## PromptTemplate
-    template = """ WRITE THE PROMPT FOR NEW APPLICATION """
-
-    prompt = PromptTemplate(input_variables = ["input_text", "no_words", "blog_style"],
-                            template = template)
-```
-+ Temperature: Change the value of temperature to make model response more or less creative
-
-   
-
-
-
+**Setting up the project:**
+1. Create a virtual Python environment: 
+conda create -p venv python==3.9 -y 
+2. Activate the conda environment: 
+conda activate venv/ 
+3. Create a requirements.txt file in your working directory with the following 
+libraries: 
+sentence-transformers 
+uvicorn 
+ctransformers 
+langchain 
+python-box 
+streamlit 
+4. Install all the libraries from requirements.txt: 
+pip install -r requirements.txt
+5. Launch the application:
+streamlit run app.py 
